@@ -26,20 +26,20 @@ public class Dados_Futebol {
 //        tec1.setDataNasc(dataTec1);
 //        tec1.setSalario(102000.00);
 //
-        Tecnico tec2 = new Tecnico();
-        tec2.setNome("Mano Menezes");
-        Calendar dataTec2 = Calendar.getInstance();
-        dataTec2.set(1957, 03, 21);
-        tec2.setDataNasc(dataTec2);
-        tec2.setSalario(90000.00);
-
-        Tecnico tec3 = new Tecnico();
-        tec3.setNome("Marcelo Oliveira");
-        Calendar dataTec3 = Calendar.getInstance();
-        dataTec3.set(1958, 02, 10);
-        tec3.setDataNasc(dataTec3);
-        tec3.setSalario(82500.00);
-
+//        Tecnico tec2 = new Tecnico();
+//        tec2.setNome("Mano Menezes");
+//        Calendar dataTec2 = Calendar.getInstance();
+//        dataTec2.set(1957, 03, 21);
+//        tec2.setDataNasc(dataTec2);
+//        tec2.setSalario(90000.00);
+//        
+//        Tecnico tec3 = new Tecnico();
+//        tec3.setNome("Marcelo Oliveira");
+//        Calendar dataTec3 = Calendar.getInstance();
+//        dataTec3.set(1958, 02, 10);
+//        tec3.setDataNasc(dataTec3);
+//        tec3.setSalario(82500.00);
+//
 //        Time tm1 = new Time();
 //        tm1.setNome("São Paulo");
 //        tm1.setEstado("SP");
@@ -47,20 +47,18 @@ public class Dados_Futebol {
 //        tm1.setTecnico(tec1);
 //        tec1.setTime(tm1);
 //
-        Time tm2 = new Time();
-        tm2.setNome("Cruzeiro");
-        tm2.setEstado("MG");
-        tm2.setPontos(32);
-        tm2.setTecnico(tec2);
-        tec2.setTime(tm2);
-
+//        Time tm2 = new Time();
+//        tm2.setNome("Cruzeiro");
+//        tm2.setEstado("MG");
+//        tm2.setPontos(32);
+//        tm2.setTecnico(tec3);
 //       
-        Time tm3 = new Time();
-        tm3.setNome("Flamengo");
-        tm3.setEstado("RJ");
-        tm3.setPontos(30);
-        tm2.setTecnico(tec3);
-        tec3.setTime(tm3);
+//        Time tm3 = new Time();
+//        tm3.setNome("Flamengo");
+//        tm3.setEstado("RJ");
+//        tm3.setPontos(30);
+//        tm3.setTecnico(tec3);
+//        tec3.setTime(tm3);
 //
 //        Jogador jog = new Jogador();
 //        jog.setNome("Rogério Ceni");
@@ -78,13 +76,13 @@ public class Dados_Futebol {
 //=====================================================
 //
 //        em.persist(jog);
+//
 //        em.persist(tec1);
-        em.persist(tec2);
-        em.persist(tec3);
-
+//        em.persist(tec2);
+//        em.persist(tec3);
 //        em.persist(tm1);
-        em.persist(tm2);
-        em.persist(tm3);
+//        em.persist(tm2);
+//        em.persist(tm3);
         et.commit();
 
         em.close();
