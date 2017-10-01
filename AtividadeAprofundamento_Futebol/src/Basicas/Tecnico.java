@@ -11,11 +11,11 @@ public class Tecnico extends Pessoa {
     @JoinColumn(name="FK_ID_Time")
     private Time time;
 
-    public Time getNomeTime() {
+    public Time getTime() {
         return time;
     }
 
-    public void setNomeTime(Time nomeTime) {
+    public void setTime(Time nomeTime) {
         this.time = nomeTime;
     }
     
