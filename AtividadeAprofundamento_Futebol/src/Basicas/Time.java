@@ -3,6 +3,8 @@ package Basicas;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -13,6 +15,7 @@ import org.hibernate.annotations.CascadeType;
 public class Time {
 
     @Id
+    @GeneratedValue(strategy =  GenerationType.TABLE)
     private int id;
     private String nome;
     private String estado;
