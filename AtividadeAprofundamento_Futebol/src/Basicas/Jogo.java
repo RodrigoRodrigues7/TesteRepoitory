@@ -1,6 +1,7 @@
 package Basicas;
 
 import java.util.Calendar;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -16,15 +17,21 @@ public class Jogo {
 
     @Id
     private int id;
-    
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "FK_ID_TimeCasa",
             insertable = true, updatable = true)
     @Fetch(FetchMode.JOIN)
     @Cascade(CascadeType.SAVE_UPDATE)
     private Time timeCasa;
-    
-//    private Time timeVisitante;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "FK_ID_TimeVisitante",
+            insertable = true, updatable = true)
+    @Fetch(FetchMode.JOIN)
+    @Cascade(CascadeType.SAVE_UPDATE)
+    private Time timeVisitante;
+
     private String nomeCampo;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -50,17 +57,17 @@ public class Jogo {
         return timeCasa;
     }
 
-    public void setTimeCasa(Time timeCasa) {
-        this.timeCasa = timeCasa;
+    public void setTimeCasa(Time timeCa) {
+        this.timeCasa = timeCa;
     }
 
-//    public Time getTimeVisitante() {
-//        return timeVisitante;
-//    }
-//
-//    public void setTimeVisitante(Time timeVisitante) {
-//        this.timeVisitante = timeVisitante;
-//    }
+    public Time getTimeVisitante() {
+        return timeVisitante;
+    }
+
+    public void setTimeVisitante(Time timeVi) {
+        this.timeVisitante = timeVi;
+    }
 
     public String getNomeCampo() {
         return nomeCampo;
@@ -100,6 +107,39 @@ public class Jogo {
 
     public void setDataJogo(Calendar dataJogo) {
         this.dataJogo = dataJogo;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 73 * hash + Objects.hashCode(this.timeCasa);
+        hash = 73 * hash + Objects.hashCode(this.timeVisitante);
+        hash = 73 * hash + Objects.hashCode(this.dataJogo);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Jogo other = (Jogo) obj;
+        if (!Objects.equals(this.timeCasa, other.timeCasa)) {
+            return false;
+        }
+        if (!Objects.equals(this.timeVisitante, other.timeVisitante)) {
+            return false;
+        }
+        if (!Objects.equals(this.dataJogo, other.dataJogo)) {
+            return false;
+        }
+        return true;
     }
 
 }
