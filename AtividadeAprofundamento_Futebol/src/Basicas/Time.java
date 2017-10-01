@@ -28,7 +28,11 @@ public class Time {
     
     @OneToMany(mappedBy = "timeCasa")
     @Cascade(CascadeType.ALL)
-    private List<Jogo> jogos;
+    private List<Jogo> listaTimeCasa;
+    
+    @OneToMany(mappedBy = "timeVisitante")
+    @Cascade(CascadeType.ALL)
+    private List<Jogo> listTimeVisitante;
 
     public int getId() {
         return id;
@@ -76,6 +80,22 @@ public class Time {
 
     public void setTecnico(Tecnico tecnico) {
         this.tecnico = tecnico;
+    }
+
+    public List<Jogo> getListaTimeCasa() {
+        return listaTimeCasa;
+    }
+
+    public void setListaTimeCasa(List<Jogo> listaTimeCasa) {
+        this.listaTimeCasa = listaTimeCasa;
+    }
+
+    public List<Jogo> getListTimeVisitante() {
+        return listTimeVisitante;
+    }
+
+    public void setListTimeVisitante(List<Jogo> listTimeVisitante) {
+        this.listTimeVisitante = listTimeVisitante;
     }
 
     @Override
