@@ -7,12 +7,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 @Entity
 public class Time {
@@ -24,15 +22,13 @@ public class Time {
     private String estado;
     private int pontos;
     
-    @OneToMany
+    @OneToMany(mappedBy="time")
     @Cascade(CascadeType.ALL)
     private List<Jogador> jogadores;
     
-    @ManyToOne
-    @JoinColumn(name = "FK_ID_Tecnico",
-            insertable = true, updatable = true)
-    @Fetch(FetchMode.JOIN)
-    @Cascade(CascadeType.SAVE_UPDATE)
+    @OneToOne
+    @JoinColumn(name = "FK_ID_Tecnico")
+    @Cascade(CascadeType.ALL)
     private Tecnico tecnico;
     
     @OneToMany(mappedBy = "timeCasa")
