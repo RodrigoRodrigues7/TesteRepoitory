@@ -1,6 +1,7 @@
 package Dados_Futebol;
 
 import Basicas.Jogador;
+import Basicas.Jogo;
 import Basicas.Juiz;
 import Basicas.Tecnico;
 import Basicas.Time;
@@ -42,14 +43,14 @@ public class Dados_Futebol {
         tec3.setSalario(82500.00);
 //        
 //================================================================
-//
+//      
         Time tm1 = new Time();
         tm1.setNome("São Paulo");
         tm1.setEstado("SP");
         tm1.setPontos(15);
         tm1.setTecnico(tec1);
         tec1.setTime(tm1);
-//
+//      
         Time tm2 = new Time();
         tm2.setNome("Cruzeiro");
         tm2.setEstado("MG");
@@ -63,7 +64,7 @@ public class Dados_Futebol {
         tm3.setPontos(30);
         tm3.setTecnico(tec3);
         tec3.setTime(tm3);
-//        
+//      
 //================================================================
 //
         Jogador jog1 = new Jogador();
@@ -157,7 +158,48 @@ public class Dados_Futebol {
         dataJu2.set(1973, 11, 16);
         ju2.setDataNasc(dataJu2);
         ju2.setSalario(35000.00);
-
+//
+//================================================================
+//
+        Jogo jogo1 = new Jogo();
+        jogo1.setTimeCasa(tm1);
+        jogo1.setTimeVisitante(tm2);
+        jogo1.setPlacar1(2);
+        jogo1.setPlacar1(1);
+        Calendar dataJogo1 = Calendar.getInstance();
+        dataJogo1.set(2013, 6, 13);
+        jogo1.setDataJogo(dataJogo1);
+        jogo1.setJuiz(ju2);
+//
+        Jogo jogo2 = new Jogo();
+        jogo2.setTimeCasa(tm2);
+        jogo2.setTimeVisitante(tm1);
+        jogo2.setPlacar1(0);
+        jogo2.setPlacar1(0);
+        Calendar dataJogo2 = Calendar.getInstance();
+        dataJogo2.set(2013, 9, 10);
+        jogo2.setDataJogo(dataJogo2);
+        jogo2.setJuiz(ju1);
+//
+        Jogo jogo3 = new Jogo();
+        jogo3.setTimeCasa(tm3);
+        jogo3.setTimeVisitante(tm2);
+        jogo3.setPlacar1(1);
+        jogo3.setPlacar1(1);
+        Calendar dataJogo3 = Calendar.getInstance();
+        dataJogo3.set(2013, 7, 14);
+        jogo3.setDataJogo(dataJogo2);
+        jogo3.setJuiz(ju2);
+//
+        Jogo jogo4 = new Jogo();
+        jogo4.setTimeCasa(tm1);
+        jogo4.setTimeVisitante(tm3);
+        jogo4.setPlacar1(0);
+        jogo4.setPlacar1(0);
+        Calendar dataJogo4 = Calendar.getInstance();
+        dataJogo4.set(2013, 8, 19);
+        jogo4.setDataJogo(dataJogo4);
+        jogo4.setJuiz(ju1);
 //
 //================================================================
 //
@@ -172,12 +214,17 @@ public class Dados_Futebol {
         em.persist(ju2);
 //
         em.persist(tec1);
-//        em.persist(tec2);
+        em.persist(tec2);
         em.persist(tec3);
 //        
         em.persist(tm1);
         em.persist(tm2);
         em.persist(tm3);
+//        
+        em.persist(jogo1);
+        em.persist(jogo2);
+        em.persist(jogo3);
+        em.persist(jogo4);
         et.commit();
 
         em.close();
