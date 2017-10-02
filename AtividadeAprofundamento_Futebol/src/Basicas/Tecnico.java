@@ -1,14 +1,15 @@
 package Basicas;
 
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 @Entity
 public class Tecnico extends Pessoa {
-    
-    @OneToOne
-    @JoinColumn(name="FK_ID_Time")
+
+    @OneToMany(mappedBy = "tecnico")
+    @Cascade(CascadeType.ALL)
     private Time time;
 
     public Time getTime() {
@@ -18,5 +19,5 @@ public class Tecnico extends Pessoa {
     public void setTime(Time nomeTime) {
         this.time = nomeTime;
     }
-    
+
 }
