@@ -13,11 +13,19 @@ import javax.persistence.InheritanceType;
 public class Pessoa {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//<------
+    @GeneratedValue(strategy = GenerationType.TABLE)//<------
     private int id;
     private String nome;
     private Calendar dataNasc;
     private Double salario;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;
