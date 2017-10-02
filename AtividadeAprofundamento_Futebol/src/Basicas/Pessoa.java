@@ -13,7 +13,7 @@ import javax.persistence.InheritanceType;
 public class Pessoa {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//<------
     private int id;
     private String nome;
     private Calendar dataNasc;
