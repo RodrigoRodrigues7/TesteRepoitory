@@ -150,8 +150,8 @@ public class Dados_Futebol {
         dataJu1.set(1930, 1, 6);
         ju1.setDataNasc(dataJu1);
         ju1.setSalario(24000.00);
-
-        Juiz ju2 = new Juiz();
+//
+        Juiz ju2 = new Juiz();;
         ju2.setNome("Paulo Cesar Oliveira");
         Calendar dataJu2 = Calendar.getInstance();
         dataJu2.set(1973, 11, 16);
