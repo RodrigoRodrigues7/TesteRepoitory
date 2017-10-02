@@ -1,6 +1,7 @@
 package Dados_Futebol;
 
 import Basicas.Jogador;
+import Basicas.Juiz;
 import Basicas.Tecnico;
 import Basicas.Time;
 import java.util.Calendar;
@@ -142,6 +143,21 @@ public class Dados_Futebol {
         jog6.setTemCardAmarelo(false);
         jog6.setQtdCardAmarelo(2);
         jog6.setQtdCardVermelho(0);
+
+        Juiz ju1 = new Juiz();
+        ju1.setNome("Armando Marques");
+        Calendar dataJu1 = Calendar.getInstance();
+        dataJu1.set(1930, 1, 6);
+        ju1.setDataNasc(dataJu1);
+        ju1.setSalario(24000.00);
+
+        Juiz ju2 = new Juiz();
+        ju2.setNome("Paulo Cesar Oliveira");
+        Calendar dataJu2 = Calendar.getInstance();
+        dataJu2.set(1973, 11, 16);
+        ju2.setDataNasc(dataJu2);
+        ju2.setSalario(35000.00);
+
 //
 //================================================================
 //
@@ -151,6 +167,9 @@ public class Dados_Futebol {
         em.persist(jog4);
         em.persist(jog5);
         em.persist(jog6);
+//
+        em.persist(ju1);
+        em.persist(ju2);
 //
         em.persist(tec1);
 //        em.persist(tec2);
