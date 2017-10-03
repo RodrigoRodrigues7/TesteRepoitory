@@ -69,7 +69,7 @@ public class Dados_Futebol {
 //
         Jogador jog1 = new Jogador();
         jog1.setNome("Rogério Ceni");
-        jog1.setIdTime(tm1);
+        jog1.setTime(tm1);
         Calendar dataJog1 = Calendar.getInstance();
         dataJog1.set(1979, 9, 28);
         jog1.setDataNasc(dataJog1);
@@ -82,7 +82,7 @@ public class Dados_Futebol {
 //        
         Jogador jog2 = new Jogador();
         jog2.setNome("Alex Silva");
-        jog2.setIdTime(tm1);
+        jog2.setTime(tm1);
         Calendar dataJog2 = Calendar.getInstance();
         dataJog2.set(1983, 0, 04);
         jog2.setDataNasc(dataJog2);
@@ -95,7 +95,7 @@ public class Dados_Futebol {
 //                
         Jogador jog3 = new Jogador();
         jog3.setNome("Fabão");
-        jog3.setIdTime(tm2);
+        jog3.setTime(tm2);
         Calendar dataJog3 = Calendar.getInstance();
         dataJog3.set(1983, 0, 04);
         jog3.setDataNasc(dataJog3);
@@ -108,7 +108,7 @@ public class Dados_Futebol {
 //                        
         Jogador jog4 = new Jogador();
         jog4.setNome("Edcarlos");
-        jog4.setIdTime(tm2);
+        jog4.setTime(tm2);
         Calendar dataJog4 = Calendar.getInstance();
         dataJog4.set(1983, 0, 04);
         jog4.setDataNasc(dataJog4);
@@ -121,7 +121,7 @@ public class Dados_Futebol {
 //        
         Jogador jog5 = new Jogador();
         jog5.setNome("Souza");
-        jog5.setIdTime(tm1);
+        jog5.setTime(tm1);
         Calendar dataJog5 = Calendar.getInstance();
         dataJog5.set(1980, 8, 27);
         jog5.setDataNasc(dataJog5);
@@ -134,7 +134,7 @@ public class Dados_Futebol {
 //        
         Jogador jog6 = new Jogador();
         jog6.setNome("Ilsinho");
-        jog6.setIdTime(tm1);
+        jog6.setTime(tm1);
         Calendar dataJog6 = Calendar.getInstance();
         dataJog6.set(1984, 11, 16);
         jog6.setDataNasc(dataJog6);
