@@ -24,11 +24,11 @@ public class Jogador extends Pessoa {
     private int qtdCardAmarelo;
     private int qtdCardVermelho;
 
-    public Time getIdTime() {
+    public Time getTime() {
         return time;
     }
 
-    public void setIdTime(Time idTm) {
+    public void setTime(Time idTm) {
         this.time = idTm;
     }
 
