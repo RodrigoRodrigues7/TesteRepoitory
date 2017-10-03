@@ -164,7 +164,7 @@ public class Dados_Futebol {
         Jogo jogo1 = new Jogo();
         jogo1.setNomeCampo("AAAAA");
         jogo1.setTimeCasa(tm1);
-        jogo1.setTimeVisitante(tm2);
+        jogo1.setTimeVisitante(tm3);
         jogo1.setPlacar1(2);
         jogo1.setPlacar2(1);
         Calendar dataJogo1 = Calendar.getInstance();
@@ -174,7 +174,7 @@ public class Dados_Futebol {
 //
         Jogo jogo2 = new Jogo();
         jogo2.setNomeCampo("BBBBB");
-        jogo2.setTimeCasa(tm2);
+        jogo2.setTimeCasa(tm3);
         jogo2.setTimeVisitante(tm1);
         jogo2.setPlacar1(0);
         jogo2.setPlacar2(0);
@@ -185,8 +185,8 @@ public class Dados_Futebol {
 //
         Jogo jogo3 = new Jogo();
         jogo3.setNomeCampo("CCCCC");
-        jogo3.setTimeCasa(tm3);
-        jogo3.setTimeVisitante(tm2);
+        jogo3.setTimeCasa(tm2);
+        jogo3.setTimeVisitante(tm3);
         jogo3.setPlacar1(1);
         jogo3.setPlacar2(1);
         Calendar dataJogo3 = Calendar.getInstance();
@@ -197,7 +197,7 @@ public class Dados_Futebol {
         Jogo jogo4 = new Jogo();
         jogo4.setNomeCampo("DDDDD");
         jogo4.setTimeCasa(tm1);
-        jogo4.setTimeVisitante(tm3);
+        jogo4.setTimeVisitante(tm2);
         jogo4.setPlacar1(0);
         jogo4.setPlacar2(0);
         Calendar dataJogo4 = Calendar.getInstance();
