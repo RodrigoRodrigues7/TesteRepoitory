@@ -18,30 +18,43 @@ public class FutebolDadosAlteracao {
 
         EntityTransaction et = em.getTransaction();
         et.begin();
+//        
+//=================== PRIMEIRO(Jogo São Paulo e Flamengo) ======================
 //
-        Jogador ilsinho = em.find(Jogador.class, new Integer(6));
-        ilsinho.setNome("Ilsinho Cavalcanti");
-        ilsinho.setSalario(89000.00);
-        ilsinho.setTemCardAmarelo(true);
+//        Jogo jogo4 = em.find(Jogo.class, new Integer(4));
+//        jogo4.setPlacar1(3);
+//        jogo4.setPlacar2(2);
+//        jogo4.getTimeCasa().setPontos(18);
+//        
+//================= SEGUNDO(Alterar Dados do Jogador Ilsinho) ==================
+//
+//        Jogador ilsinho = em.find(Jogador.class, new Integer(6));
+//        ilsinho.setNome("Ilsinho Cavalcanti");
+//        ilsinho.setSalario(89000.00);
+//        ilsinho.setTemCardAmarelo(true);
+//        
+//=============== TERCEIRO(Alterar o Time do Jogador Alex Silva) ===============
+//
+//        Jogador alexSilva = em.find(Jogador.class, new Integer(2));
+//        alexSilva.setTime(em.getReference(Time.class, new Integer(3)));
+//        
+//================= QUARTO(Excluir o Jogador Rogério Ceni) =====================
+//
+//        Jogador rogerioCeni = em.find(Jogador.class, new Integer(1));
+//        
+//================ QUINTO(Excluir Time Cruzeiro, Jogadores e Tecnico)===========
+//
+//        Time cruzeiro = em.find(Time.class, new Integer(2));
 //        
 //===============================================================
 //
-        Jogador alexSilva = em.find(Jogador.class, new Integer(2));
-        alexSilva.setTime(em.getReference(Time.class, new Integer(3)));
-//        
-//===============================================================
+//        em.persist(jogo4);//°1
+//        em.persist(ilsinho);//°2
+//        em.persist(alexSilva);//°3
 //
-        Jogador rogerioCeni = em.find(Jogador.class, new Integer(1));
+//        em.remove(rogerioCeni);//°4
+//        em.remove(cruzeiro);//°5
 //
-        Time cruzeiro = em.find(Time.class, new Integer(2));
-//        
-//===============================================================
-//
-        em.remove(rogerioCeni);
-        em.remove(cruzeiro);
-
-        em.persist(ilsinho);
-        em.persist(alexSilva);
         et.commit();
 
         em.close();
