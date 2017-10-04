@@ -97,7 +97,7 @@ public class Dados_Futebol {
         jog3.setNome("Fabão");
         jog3.setTime(tm3);
         Calendar dataJog3 = Calendar.getInstance();
-        dataJog3.set(1983, 0, 04);
+        dataJog3.set(1982, 10, 22);
         jog3.setDataNasc(dataJog3);
         jog3.setSalario(45000.00);
         jog3.setNumCamisa(03);
@@ -110,11 +110,11 @@ public class Dados_Futebol {
         jog4.setNome("Edcarlos");
         jog4.setTime(tm3);
         Calendar dataJog4 = Calendar.getInstance();
-        dataJog4.set(1983, 0, 04);
+        dataJog4.set(1984, 4, 16);
         jog4.setDataNasc(dataJog4);
         jog4.setSalario(45000.00);
         jog4.setNumCamisa(04);
-        jog4.setEstaEmCampo(true);
+        jog4.setEstaEmCampo(false);
         jog4.setTemCardAmarelo(false);
         jog4.setQtdCardAmarelo(2);
         jog4.setQtdCardVermelho(1);
@@ -145,6 +145,9 @@ public class Dados_Futebol {
         jog6.setQtdCardAmarelo(2);
         jog6.setQtdCardVermelho(0);
 
+//
+//================================================================
+//
         Juiz ju1 = new Juiz();
         ju1.setNome("Armando Marques");
         Calendar dataJu1 = Calendar.getInstance();
