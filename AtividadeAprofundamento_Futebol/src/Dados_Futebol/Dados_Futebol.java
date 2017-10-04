@@ -55,15 +55,15 @@ public class Dados_Futebol {
         tm3.setNome("Cruzeiro");
         tm3.setEstado("MG");
         tm3.setPontos(32);
-        tm3.setTecnico(tec3);
-        tec3.setTime(tm3);
+        tm3.setTecnico(tec2);
+        tec2.setTime(tm3);
 //       
         Time tm2 = new Time();
         tm2.setNome("Flamengo");
         tm2.setEstado("RJ");
         tm2.setPontos(30);
         tm2.setTecnico(tec3);
-        tec3.setTime(tm3);
+        tec3.setTime(tm2);
 //      
 //================================================================
 //
