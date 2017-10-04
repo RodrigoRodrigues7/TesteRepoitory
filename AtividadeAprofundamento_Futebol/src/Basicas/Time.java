@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import org.hibernate.annotations.Cascade;
@@ -17,28 +19,34 @@ import org.hibernate.annotations.CascadeType;
 public class Time {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private int id;
     private String nome;
     private String estado;
     private int pontos;
-    
-    @OneToMany(mappedBy="time")
+
+    @OneToMany(mappedBy = "time")
     @Cascade(CascadeType.ALL)
     private List<Jogador> jogadores = new ArrayList<>();
-    
+
     @OneToOne
     @JoinColumn(name = "FK_ID_Tecnico")
     @Cascade(CascadeType.ALL)
     private Tecnico tecnico;
-    
+
     @OneToMany(mappedBy = "timeCasa")
     @Cascade(CascadeType.ALL)
     private List<Jogo> listaTimeCasa;
-    
+
     @OneToMany(mappedBy = "timeVisitante")
     @Cascade(CascadeType.ALL)
     private List<Jogo> listTimeVisitante;
+
+    @ManyToMany
+    @JoinTable(name = "Time_Campeonato",
+            joinColumns = @JoinColumn(name = "ID_Time"),
+            inverseJoinColumns = @JoinColumn(name = "ID_Campeonato"))
+    private List<Campeonato> listaCamp = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -102,6 +110,14 @@ public class Time {
 
     public void setListTimeVisitante(List<Jogo> listTimeVisitante) {
         this.listTimeVisitante = listTimeVisitante;
+    }
+
+    public List<Campeonato> getListaCamp() {
+        return listaCamp;
+    }
+
+    public void setListaCamp(List<Campeonato> listaCamp) {
+        this.listaCamp = listaCamp;
     }
 
     @Override
