@@ -1,5 +1,6 @@
 package Dados_Futebol;
 
+import Basicas.Campeonato;
 import Basicas.Jogador;
 import Basicas.Jogo;
 import Basicas.Juiz;
@@ -206,6 +207,39 @@ public class Dados_Futebol {
 //
 //================================================================
 //
+
+        Campeonato camp1 = new Campeonato();
+        camp1.setNomeCamp("Campeonato Brasileiro");
+
+        Calendar dataIniCamp1 = Calendar.getInstance();
+        dataIniCamp1.set(2013, 5, 10);
+        camp1.setDataInicio(dataIniCamp1);
+        
+        Calendar datafimCamp1 = Calendar.getInstance();
+        datafimCamp1.set(2013, 11, 2);
+        camp1.setDataFim(datafimCamp1);
+
+        camp1.getTimes().add(tm1);
+        camp1.getTimes().add(tm2);
+        camp1.getTimes().add(tm3);
+//        
+        Campeonato camp2 = new Campeonato();
+        camp2.setNomeCamp("Taça Glória de Goitá");
+
+        Calendar dataIniCamp2 = Calendar.getInstance();
+        dataIniCamp2.set(2013, 2, 2);
+        camp2.setDataInicio(dataIniCamp2);
+        
+        Calendar datafimCamp2 = Calendar.getInstance();
+        datafimCamp2.set(2013, 4, 1);
+        camp2.setDataFim(datafimCamp2);
+
+        camp2.getTimes().add(tm2);
+        camp2.getTimes().add(tm3);
+
+//
+//================================================================
+//
         em.persist(jog1);
         em.persist(jog2);
         em.persist(jog3);
@@ -228,6 +262,10 @@ public class Dados_Futebol {
         em.persist(jogo2);
         em.persist(jogo3);
         em.persist(jogo4);
+//        
+        em.persist(camp1);
+        em.persist(camp2);
+//        
         et.commit();
 
         em.close();
