@@ -18,18 +18,29 @@ public class FutebolDadosAlteracao {
         EntityTransaction et = em.getTransaction();
         et.begin();
         
-        /*
-        Jogador ilsinho = em.find(Jogador.class, new Integer(6));
-        ilsinho.setNome("Ilsinho Cavalcanti");
-        ilsinho.setSalario(89000.00);
-        ilsinho.setTemCardAmarelo(true);
-        */
+//        Jogador ilsinho = em.find(Jogador.class, new Integer(6));
+//        ilsinho.setNome("Ilsinho Cavalcanti");
+//        ilsinho.setSalario(89000.00);
+//        ilsinho.setTemCardAmarelo(true);
         
-        Jogador alexSilva = em.find(Jogador.class, new Integer(2));
+//        Jogador alexSilva = em.find(Jogador.class, new Integer(2));
+//        alexSilva.setTime(em.getReference(Time.class, new Integer(3)));
+
+//          Jogador rogerioCeni = em.find(Jogador.class, new Integer(1));
+//          em.remove(rogerioCeni);
+          
+//          Jogador fabao = em.find(Jogador.class, new Integer(3));
+//          em.remove(fabao);
+//          
+//          Jogador edCarlos = em.find(Jogador.class, new Integer(4));
+//          em.remove(edCarlos);          
+          
+//          Time cruzeiro = em.find(Time.class, new Integer(2));
+//          em.remove(cruzeiro);
+          
         
-        
-        //em.persist(ilsinho);
-        em.persist(alexSilva);
+//        em.persist(ilsinho);
+//        em.persist(alexSilva);
         
         et.commit();
 
