@@ -1,5 +1,6 @@
 package Basicas;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.Entity;
@@ -24,7 +25,7 @@ public class Time {
     
     @OneToMany(mappedBy="time")
     @Cascade(CascadeType.ALL)
-    private List<Jogador> jogadores;
+    private List<Jogador> jogadores = new ArrayList<>();
     
     @OneToOne
     @JoinColumn(name = "FK_ID_Tecnico")
@@ -75,7 +76,7 @@ public class Time {
         return jogadores;
     }
 
-    public void setJogadores(List<Jogador> jogadores) {
+    public void setJogadores(ArrayList<Jogador> jogadores) {
         this.jogadores = jogadores;
     }
 
