@@ -51,18 +51,18 @@ public class Dados_Futebol {
         tm1.setTecnico(tec1);
         tec1.setTime(tm1);
 //      
-        Time tm2 = new Time();
-        tm2.setNome("Cruzeiro");
-        tm2.setEstado("MG");
-        tm2.setPontos(32);
-        tm2.setTecnico(tec3);
-        tec3.setTime(tm2);
-//       
         Time tm3 = new Time();
-        tm3.setNome("Flamengo");
-        tm3.setEstado("RJ");
-        tm3.setPontos(30);
+        tm3.setNome("Cruzeiro");
+        tm3.setEstado("MG");
+        tm3.setPontos(32);
         tm3.setTecnico(tec3);
+        tec3.setTime(tm3);
+//       
+        Time tm2 = new Time();
+        tm2.setNome("Flamengo");
+        tm2.setEstado("RJ");
+        tm2.setPontos(30);
+        tm2.setTecnico(tec3);
         tec3.setTime(tm3);
 //      
 //================================================================
@@ -95,7 +95,7 @@ public class Dados_Futebol {
 //                
         Jogador jog3 = new Jogador();
         jog3.setNome("Fabão");
-        jog3.setTime(tm2);
+        jog3.setTime(tm3);
         Calendar dataJog3 = Calendar.getInstance();
         dataJog3.set(1983, 0, 04);
         jog3.setDataNasc(dataJog3);
@@ -108,7 +108,7 @@ public class Dados_Futebol {
 //                        
         Jogador jog4 = new Jogador();
         jog4.setNome("Edcarlos");
-        jog4.setTime(tm2);
+        jog4.setTime(tm3);
         Calendar dataJog4 = Calendar.getInstance();
         dataJog4.set(1983, 0, 04);
         jog4.setDataNasc(dataJog4);
@@ -176,8 +176,6 @@ public class Dados_Futebol {
         jogo2.setNomeCampo("BBBBB");
         jogo2.setTimeCasa(tm3);
         jogo2.setTimeVisitante(tm1);
-        jogo2.setPlacar1(0);
-        jogo2.setPlacar2(0);
         Calendar dataJogo2 = Calendar.getInstance();
         dataJogo2.set(2013, 9, 10);
         jogo2.setDataJogo(dataJogo2);
@@ -198,8 +196,6 @@ public class Dados_Futebol {
         jogo4.setNomeCampo("DDDDD");
         jogo4.setTimeCasa(tm1);
         jogo4.setTimeVisitante(tm2);
-        jogo4.setPlacar1(0);
-        jogo4.setPlacar2(0);
         Calendar dataJogo4 = Calendar.getInstance();
         dataJogo4.set(2013, 8, 19);
         jogo4.setDataJogo(dataJogo4);
