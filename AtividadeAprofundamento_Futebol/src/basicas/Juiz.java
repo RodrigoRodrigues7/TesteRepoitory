@@ -1,4 +1,4 @@
-package Basicas;
+package basicas;
 
 import java.util.List;
 import javax.persistence.Entity;
@@ -6,6 +6,9 @@ import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
+
+import basicas.Jogo;
+import basicas.Pessoa;
 
 @Entity
 public class Juiz extends Pessoa {

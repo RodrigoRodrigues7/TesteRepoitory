@@ -1,13 +1,13 @@
-package Dados_Futebol;
+package dados_Futebol;
 
-import Basicas.Jogador;
-import Basicas.Jogo;
-import Basicas.Tecnico;
-import Basicas.Time;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+
+import basicas.Jogador;
+import basicas.Jogo;
+import basicas.Time;
 
 public class FutebolDadosAlteracao {
 

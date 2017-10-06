@@ -1,16 +1,18 @@
-package Dados_Futebol;
+package dados_Futebol;
 
-import Basicas.Campeonato;
-import Basicas.Jogador;
-import Basicas.Jogo;
-import Basicas.Juiz;
-import Basicas.Tecnico;
-import Basicas.Time;
 import java.util.Calendar;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+
+import basicas.Campeonato;
+import basicas.Jogador;
+import basicas.Jogo;
+import basicas.Juiz;
+import basicas.Tecnico;
+import basicas.Time;
+import basicas.Time.Estado;
 
 public class Dados_Futebol {
 
@@ -47,21 +49,21 @@ public class Dados_Futebol {
 //      
         Time tm1 = new Time();
         tm1.setNome("S√£o Paulo");
-        tm1.setEstado("SP");
+        tm1.setEstado(Estado.SP);
         tm1.setPontos(15);
         tm1.setTecnico(tec1);
         tec1.setTime(tm1);
 //      
         Time tm3 = new Time();
         tm3.setNome("Cruzeiro");
-        tm3.setEstado("MG");
+        tm3.setEstado(Estado.MG);
         tm3.setPontos(32);
         tm3.setTecnico(tec2);
         tec2.setTime(tm3);
 //       
         Time tm2 = new Time();
         tm2.setNome("Flamengo");
-        tm2.setEstado("RJ");
+        tm2.setEstado(Estado.RJ);
         tm2.setPontos(30);
         tm2.setTecnico(tec3);
         tec3.setTime(tm2);
@@ -69,7 +71,7 @@ public class Dados_Futebol {
 //================================================================
 //
         Jogador jog1 = new Jogador();
-        jog1.setNome("Rog√©rio Ceni");
+        jog1.setNome("RogÈrio Ceni");
         jog1.setTime(tm1);
         Calendar dataJog1 = Calendar.getInstance();
         dataJog1.set(1979, 9, 28);
@@ -95,7 +97,7 @@ public class Dados_Futebol {
         jog2.setQtdCardVermelho(1);
 //                
         Jogador jog3 = new Jogador();
-        jog3.setNome("Fab√£o");
+        jog3.setNome("Fab„o");
         jog3.setTime(tm3);
         Calendar dataJog3 = Calendar.getInstance();
         dataJog3.set(1982, 10, 22);
@@ -222,9 +224,14 @@ public class Dados_Futebol {
         camp1.getTimes().add(tm1);
         camp1.getTimes().add(tm2);
         camp1.getTimes().add(tm3);
+        
+        camp1.setPrimeiroColocado(tm1);
+        camp1.setSegundoColocado(tm3);
+        camp1.setTerceiroColocado(tm2);
+        
 //        
         Campeonato camp2 = new Campeonato();
-        camp2.setNomeCamp("Ta√ßa Gl√≥ria de Goit√°");
+        camp2.setNomeCamp("TaÁa GlÛria de Goit·°");
 
         Calendar dataIniCamp2 = Calendar.getInstance();
         dataIniCamp2.set(2013, 2, 2);
@@ -234,8 +241,11 @@ public class Dados_Futebol {
         datafimCamp2.set(2013, 4, 1);
         camp2.setDataFim(datafimCamp2);
 
-        camp2.getTimes().add(tm2);
         camp2.getTimes().add(tm3);
+        camp2.getTimes().add(tm2);
+        
+        camp2.setPrimeiroColocado(tm2);
+        camp2.setSegundoColocado(tm3);
 
 //
 //================================================================

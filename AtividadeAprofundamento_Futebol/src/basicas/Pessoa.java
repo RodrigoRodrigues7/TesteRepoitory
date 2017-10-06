@@ -1,4 +1,4 @@
-package Basicas;
+package basicas;
 
 import java.util.Calendar;
 import javax.persistence.GeneratedValue;

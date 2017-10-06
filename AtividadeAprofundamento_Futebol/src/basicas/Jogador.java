@@ -1,4 +1,4 @@
-package Basicas;
+package basicas;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -7,6 +7,10 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+
+import basicas.Jogador;
+import basicas.Pessoa;
+import basicas.Time;
 
 @Entity
 public class Jogador extends Pessoa {
@@ -71,8 +75,23 @@ public class Jogador extends Pessoa {
     public void setQtdCardVermelho(int qtdCardVermelho) {
         this.qtdCardVermelho = qtdCardVermelho;
     }
-
+    
+    
     @Override
+	public String toString() {
+		return " -----------------------------\n " 
+				+ "Jogador:\n "
+				+ super.getNome() + "\n"
+				+ " numCamisa = " + numCamisa       + "\n"
+				+ " estaEmCampo = " + estaEmCampo     + "\n" 
+				+ " temCardAmarelo = " + temCardAmarelo  + "\n" 
+				+ " qtdCardAmarelo = " + qtdCardAmarelo  + "\n" 
+				+ " qtdCardVermelho = " + qtdCardVermelho + "\n"
+				+ " ----------------------------- ";
+				
+	}
+
+	@Override
     public int hashCode() {
         int hash = 7;
         hash = 97 * hash + this.numCamisa;

@@ -1,9 +1,11 @@
-package Basicas;
+package basicas;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,6 +17,11 @@ import javax.persistence.OneToOne;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 
+import basicas.Jogador;
+import basicas.Jogo;
+import basicas.Tecnico;
+import basicas.Time;
+
 @Entity
 public class Time {
 
@@ -22,7 +29,9 @@ public class Time {
     @GeneratedValue(strategy = GenerationType.TABLE)
     private int id;
     private String nome;
-    private String estado;
+    
+    @Enumerated(EnumType.STRING)
+    private Estado estado;
     private int pontos;
 
     @OneToMany(mappedBy = "time")
@@ -48,6 +57,10 @@ public class Time {
             inverseJoinColumns = @JoinColumn(name = "ID_Campeonato"))
     private List<Campeonato> listaCamp = new ArrayList<>();
 
+    public enum Estado {
+    	AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO
+    }
+    
     public int getId() {
         return id;
     }
@@ -64,12 +77,12 @@ public class Time {
         this.nome = nome;
     }
 
-    public String getEstado() {
+    public Estado getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstado(Estado uf) {
+        this.estado = uf;
     }
 
     public int getPontos() {

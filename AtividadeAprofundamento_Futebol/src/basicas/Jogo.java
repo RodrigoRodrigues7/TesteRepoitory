@@ -1,4 +1,4 @@
-package Basicas;
+package basicas;
 
 import java.util.Calendar;
 import java.util.Objects;
@@ -13,6 +13,10 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+
+import basicas.Jogo;
+import basicas.Juiz;
+import basicas.Time;
 
 @Entity
 public class Jogo {
